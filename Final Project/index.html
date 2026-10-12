@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Final Project</p>
+          <h1>Inventory Dashboard</h1>
+        </div>
+      </header>
+
+      <main class="dashboard">
+        <section class="panel add-panel">
+          <h2>Add Product</h2>
+          <form id="inventory-form">
+            <label>
+              Product Name
+              <input id="product-name" type="text" placeholder="Enter product name" required />
+            </label>
+
+            <label>
+              Product Price
+              <input id="product-price" type="number" min="1" step="0.01" placeholder="Enter price" required />
+            </label>
+
+            <button type="submit">Add Item</button>
+          </form>
+        </section>
+
+        <section class="panel stats-panel">
+          <h2>Overview</h2>
+          <div class="stats-grid">
+            <div class="stat-card accent">
+              <span>Total Items</span>
+              <strong id="item-count">0</strong>
+            </div>
+            <div class="stat-card">
+              <span>Inventory Value</span>
+              <strong id="total-value">₹0</strong>
+            </div>
+            <div class="stat-card">
+              <span>Taxed Total</span>
+              <strong id="taxed-total">₹0</strong>
+            </div>
+            <div class="stat-card">
+              <span>Affordable Items</span>
+              <strong id="affordable-count">0</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel list-panel">
+          <div class="panel-header">
+            <h2>Inventory Items</h2>
+          </div>
+          <div id="inventory-list" class="inventory-list"></div>
+        </section>
+
+        <section class="panel analysis-panel">
+          <h2>Insights</h2>
+          <div class="insight-block">
+            <h3>Affordable Items</h3>
+            <ul id="affordable-items"></ul>
+          </div>
+
+          <div class="insight-block">
+            <h3>Formatted Report</h3>
+            <ul id="report-list"></ul>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
